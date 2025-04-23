@@ -15,10 +15,11 @@ class ActivityBurstTimerApp(tk.Tk):
         # Offboard these into a different object class.
         seconds = 30
         self.max_time = seconds
-        self.title("Activity Burst Timer v0.1")
+        self.title("Activity Burst Timer v0.0.1")
 
         self.style = ttk.Style()
         self.style.theme_use('default')
+        # how do I change this to match the system theme? 
         self.style.configure("black.Horizontal.TProgressbar", background='red')
 
         self.bar = Progressbar(self, length=220, style='black.Horizontal.TProgressbar')
@@ -41,6 +42,7 @@ class ActivityBurstTimerApp(tk.Tk):
             # This should go into an action method
             self.label.configure(text="Stop working!")
             self.bar['value'] = 0
+            # TODO: Add a button to start break or restart the timer.
         else:
             # this should also go into an action function
             self.label.configure(text=f"{self.remaining}")

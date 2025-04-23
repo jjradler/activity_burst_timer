@@ -1,0 +1,8 @@
+# IDEA Project for Python .gitignore
+.idea/
+
+# compiled python files
+*.pyc
+
+# pycache
+__pycache__
